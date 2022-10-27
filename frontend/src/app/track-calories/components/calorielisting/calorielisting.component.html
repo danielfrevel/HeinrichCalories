@@ -1,0 +1,5 @@
+<div class="container">
+  <div class="border" *ngFor="let meal of this.mealService.meals$ | async">
+    <meal-item [meal]="meal"></meal-item>
+  </div>
+</div>

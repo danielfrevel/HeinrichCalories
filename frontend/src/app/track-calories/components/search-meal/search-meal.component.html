@@ -1,0 +1,17 @@
+<div class="search-box">
+  <div class="search">
+    <input
+      #box
+      class="input"
+      (keyup.enter)="mealService.searchMeals(box.value)"
+      hint="Suchen"
+    />
+    <button class="btn-1" (click)="mealService.searchMeals(box.value)">
+      🔎
+    </button>
+  </div>
+
+  <div class="meals" *ngFor="let meal of this.mealService.foundMeals$ | async">
+    <meal-item class="meal" [meal]="meal" [enableAdding]="true"> </meal-item>
+  </div>
+</div>

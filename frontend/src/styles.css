@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+div > * {
+  color: white;
+}
+
+:root {
+  --main: #3a2dc8;
+  --main-alt: #200fdc;
+  --accent: #736bd2;
+  --search-background: rgb(61, 57, 74);
+  background-color: rgb(21, 19, 19);
+}
+
+.btn-1 {
+  margin: 5px;
+  padding: 7px;
+  border: 3px;
+  border-radius: 4px;
+  background-color: var(--main-alt);
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 10px;
+  margin: 8px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 var(--main-alt);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.btn-1:hover {
+  background-color: var(--accent);
+  box-shadow: #200fdc;
+}
+
+.input {
+  background-color: var(--search-background);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vh;
+  border-radius: 10px;
+}

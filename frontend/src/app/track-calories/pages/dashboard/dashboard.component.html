@@ -1,0 +1,26 @@
+<div class="page">
+  <div class="enter-code">
+    <button class="btn-1" (click)="enterCode()">Code eingeben</button>
+
+    <input
+      #box
+      *ngIf="showEnterCode"
+      (keyup.enter)="zundung(box.value)"
+      [(ngModel)]="boxValue"
+      class="input"
+    />
+    <button class="btn-1" *ngIf="showEnterCode" (click)="zundung(boxValue)">
+      🔥
+    </button>
+
+    <p class="fit-content"><a>🔑</a>{{ this.mealService.key$ | async }}</p>
+  </div>
+
+  <div class="dashboard">
+    <app-caloriehud class="hud"></app-caloriehud>
+    <div class="listings">
+      <app-calorielisting></app-calorielisting>
+      <search-meal></search-meal>
+    </div>
+  </div>
+</div>

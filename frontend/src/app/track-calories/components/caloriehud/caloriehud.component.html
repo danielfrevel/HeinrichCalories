@@ -1,0 +1,13 @@
+<div id="progress-bar" class="all-rounded">
+  <div
+    id="progress-bar-percentage"
+    class="all-rounded"
+    [style.width.%]="this.mealService.width$ | async"
+  >
+    <span>{{ this.mealService.currentCalories$ | async }} / 2500</span>
+  </div>
+</div>
+
+<p>Fat {{ this.mealService.currentFat$ | async }} g</p>
+<p>Carbs {{ this.mealService.currentCarbs$ | async }} g</p>
+<p>Protein {{ this.mealService.currentProtein$ | async }} g</p>

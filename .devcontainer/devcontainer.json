@@ -1,0 +1,38 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/dotnet
+{
+  "name": "C# (.NET)",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "postStartCommand": "dotnet dev-certs https && dotnet dev-certs https --trust && dotnet restore",
+  // Set *default* container specific settings.json values on container create.
+
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-dotnettools.csharp",
+    "doggy8088.angular-extension-pack",
+    "fernandoescolar.vscode-solution-explorer",
+    "jorgeserrano.vscode-csharp-snippets",
+    "kevinkyang.auto-comment-blocks",
+    "mikael.angular-beastcode",
+    "wenfangdu.snippet-generator",
+    "esbenp.prettier-vscode",
+    "kreativ-software.csharpextensions",
+    "cweijan.vscode-database-client2",
+    "VisualStudioExptTeam.vscodeintellicode",
+    "Gruntfuggly.todo-tree",
+    "vscode-icons-team.vscode-icons",
+    "yigitfindikli.primeflexsnippets",
+    "donjayamanne.githistory",
+    "Angular.ng-template",
+    "rangav.vscode-thunder-client",
+    "firefox-devtools.vscode-firefox-debug",
+    "hbenl.vscode-test-explorer",
+    "dave-hagedorn.jenkins-runner",
+    "GrapeCity.gc-excelviewer"
+  ],
+
+  "remoteUser": "vscode"
+}

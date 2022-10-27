@@ -1,0 +1,36 @@
+version: "3.5"
+
+services:
+  dev:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        VARIANT: "6.0"
+        INSTALL_NODE: "true"
+        NODE_VERSION: "lts/*"
+
+    command: /bin/sh -c "sleep infinity"
+    volumes:
+      - ..:/workspace
+    depends_on:
+      - db
+    network_mode: host
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile_db
+    user: root
+    volumes:
+      - ./_volumes/sqlsystem:/var/opt/mssql/
+      - ./_volumes/sqldata:/var/opt/sqlserver/data
+      - ./_volumes/sqllog:/var/opt/sqlserver/log
+      - ./_volumes/sqlbackup:/var/opt/sqlserver/backup
+    ports:
+      - 50505:1433
+    environment:
+      SA_PASSWORD: "Vmware##"
+      ACCEPT_EULA: "Y"
+      MSSQL_DATA_DIR: "/var/opt/sqlserver/data"
+      MSSQL_LOG_DIR: "/var/opt/sqlserver/log"
+      MSSQL_BACKUP_DIR: "/var/opt/sqlserver/backup"

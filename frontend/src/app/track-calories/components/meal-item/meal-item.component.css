@@ -1,0 +1,19 @@
+.box-sizing {
+  display: flex;
+  align-items: center;
+}
+
+.moin {
+  display: flex;
+}
+
+.moooin {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+div > p {
+  margin: 1px;
+}

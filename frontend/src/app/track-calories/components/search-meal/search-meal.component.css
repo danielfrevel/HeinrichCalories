@@ -1,0 +1,20 @@
+.search-box {
+  width: 50vh;
+  max-width: 50vh;
+  height: 80vh;
+  max-height: 80vh;
+  overflow-x: scroll;
+}
+.search-box::-webkit-scrollbar {
+  display: none;
+}
+
+.meals {
+  display: flex;
+
+  overflow-x: auto;
+}
+
+.meal {
+  justify-items: auto;
+}

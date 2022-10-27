@@ -1,0 +1,25 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listings {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 😈 */
+.fit-content {
+  width: fit-content;
+}
+
+.enter-code {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page {
+  height: 95vh;
+  overflow: hidden;
+}

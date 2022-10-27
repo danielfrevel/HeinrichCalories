@@ -1,0 +1,13 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+USER root
+
+RUN mkdir /var/opt/sqlserver
+RUN mkdir /var/opt/sqlserver/data
+RUN mkdir /var/opt/sqlserver/log
+RUN mkdir /var/opt/sqlserver/backup
+
+USER mssql
+
+CMD /opt/mssql/bin/sqlservr
+ 

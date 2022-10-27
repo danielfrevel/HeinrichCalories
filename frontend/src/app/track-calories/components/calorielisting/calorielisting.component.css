@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  width: 50vh;
+  max-width: 50vh;
+  height: 50vh;
+  max-height: 50vh;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+.add-button {
+  margin: 4px;
+  padding: 4px;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}

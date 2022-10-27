@@ -1,0 +1,26 @@
+<div class="box-sizing">
+  <div class="card moin container">
+    <button class="btn-1" *ngIf="enableAdding" (click)="addMealEvent()">
+      +
+    </button>
+    <p>
+      {{ meal?.name }}
+    </p>
+  </div>
+  <div class="moooin card">
+    <div class="moin">
+      <p style="margin-right: 1px">
+        kCal:<b>{{ meal?.calories }}</b>
+      </p>
+      <p style="margin-right: 1px">
+        g:<b>{{ meal?.weight }}</b>
+      </p>
+    </div>
+
+    <div class="moin">
+      <p style="margin-right: 1px">P: {{ meal?.prots }}</p>
+      <p style="margin-right: 1px">C: {{ meal?.carbs }}</p>
+      <p style="margin-right: 1px">F: {{ meal?.fats }}</p>
+    </div>
+  </div>
+</div>

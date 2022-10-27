@@ -1,0 +1,28 @@
+.all-rounded {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#progress-bar {
+  width: 20vw;
+  background: var(--search-background);
+  position: relative;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+}
+
+#progress-bar-percentage {
+  background: var(--main-alt);
+  padding: 5px 0px;
+  color: white;
+  text-align: center;
+  height: 20px;
+}
+
+#progress-bar-percentage span {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
